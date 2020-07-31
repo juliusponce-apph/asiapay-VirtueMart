@@ -20,7 +20,7 @@ This plugin supports Joomla (3.X) and VirtueMart (3.X) and higher.
  4. On the confirmation page, review your changes then click the “Confirm button”.
 
  ## Documentation
-[VirtueMart documentation]()
+[VirtueMart documentation](https://github.com/asiapay-lib/asiapay-VirtueMart/blob/master/Joomla%20VirtueMart%203.X%20Plugin%20Setup%20Guide%2020150408.pdf)
 
 ## Support
 If you have a feature request, or spotted a bug or a technical problem, create a GitHub issue. For other questions, contact our [Customer Service](https://www.paydollar.com/en/contactus.html).
