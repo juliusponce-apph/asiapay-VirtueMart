@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" group="vmpayment">
+    <name>VMPAYMENT_ASIAPAY</name>
+    <creationDate>April 2015</creationDate>
+    <author>APPH</author>
+    <authorUrl>http://www.asiapay.com</authorUrl>
+    <copyright>Copyright (C)2015 AsiaPay</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>3.0.6.2</version>
+    <description>
+    	<![CDATA[<a href="http://www.asiapay.com" target="_blank">AsiaPay</a> payment gateway.]]>
+    </description>
+
+    <files>
+		<filename plugin="asiapay">asiapay.php</filename>
+		<folder>language</folder>
+    </files>    
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_virtuemart/fields">
+    			<field required="true" name="asiapay_payment_url" type="list" default="https://www.paydollar.com/b2c2/eng/payment/payForm.jsp" label="VMPAYMENT_ASIAPAY_PAYMENT_URL" description="VMPAYMENT_ASIAPAY_PAYMENT_URL_DESC">
+			    	<option value="https://www.paydollar.com/b2c2/eng/payment/payForm.jsp">PayDollar - Live URL</option>
+			    	<option value="https://test.paydollar.com/b2cDemo/eng/payment/payForm.jsp">PayDollar - Test URL</option>
+			    	<option value="https://www.pesopay.com/b2c2/eng/payment/payForm.jsp">PesoPay - Live URL</option>
+			    	<option value="https://test.pesopay.com/b2cDemo/eng/payment/payForm.jsp">PesoPay - Test URL</option>
+			    	<option value="https://www.siampay.com/b2c2/eng/payment/payForm.jsp">SiamPay - Live URL</option>
+			    	<option value="https://test.siampay.com/b2cDemo/eng/payment/payForm.jsp">SiamPay - Test URL</option>
+				</field>
+				<field required="true" type="text" name="asiapay_merchant_id"  size="50" label="VMPAYMENT_ASIAPAY_MERCHANT_ID" default="" description="VMPAYMENT_ASIAPAY_MERCHANT_ID_DESC" />
+				<field required="true" type="text" name="asiapay_pay_method"  size="50" label="VMPAYMENT_ASIAPAY_PAY_METHOD" default="ALL" description="VMPAYMENT_ASIAPAY_PAY_METHOD_DESC" />		
+				<field name="asiapay_pay_type" type="radio" default="N" label="VMPAYMENT_ASIAPAY_PAY_TYPE" description="VMPAYMENT_ASIAPAY_PAY_TYPE_DESC">
+			    	<option value="N">Normal (Sale)</option>
+			    	<option value="H">Hold (Authorize)</option>
+				</field>		
+				<field type="text" name="asiapay_secure_hash_secret"  size="50" label="VMPAYMENT_ASIAPAY_SECURE_HASH_SECRET" default="" description="VMPAYMENT_ASIAPAY_SECURE_HASH_SECRET_DESC" />			
+            </fieldset>
+        </fields>
+    </vmconfig>
+</extension>
