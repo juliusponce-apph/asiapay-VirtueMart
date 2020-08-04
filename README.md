@@ -2,7 +2,7 @@
 Use PayDollar/SaimPay/PesoPays plugin for VirtueMart to offer ALL payments option.
 
 ## Integration
-The plugin integrates integrate VirtueMart with PayDollar/SaimPay/PesoPay payment gateway with All payment method.
+The plugin integrates VirtueMart with PayDollar/SaimPay/PesoPay payment gateway with All payment method.
 
 ## Requirements
 This plugin supports Joomla (3.X) and VirtueMart (3.X) and higher.
