@@ -32,7 +32,28 @@
 			    	<option value="N">Normal (Sale)</option>
 			    	<option value="H">Hold (Authorize)</option>
 				</field>		
-				<field type="text" name="asiapay_secure_hash_secret"  size="50" label="VMPAYMENT_ASIAPAY_SECURE_HASH_SECRET" default="" description="VMPAYMENT_ASIAPAY_SECURE_HASH_SECRET_DESC" />			
+				<field type="text" name="asiapay_secure_hash_secret"  size="50" label="VMPAYMENT_ASIAPAY_SECURE_HASH_SECRET" default="" description="VMPAYMENT_ASIAPAY_SECURE_HASH_SECRET_DESC" />	
+
+                <field required="true" name="asiapay_transaction_type" type="list" default="01" label="VMPAYMENT_ASIAPAY_TRANSACTION_TYPE" description="VMPAYMENT_ASIAPAY_TRANSACTION_TYPE_DESC">
+                    <option value="01">Goods/ Service Purchase</option>
+                    <option value="03">Check Acceptance</option>
+                    <option value="10">Account Funding</option>
+                    <option value="11">Quasi-Cash Transaction</option>
+                    <option value="28">Prepaid Activation and Load</option>
+                </field>
+
+                <field required="true" name="asiapay_challenge_pref" type="list" default="04" label="VMPAYMENT_ASIAPAY_CHALLENGE_PREF" description="VMPAYMENT_ASIAPAY_CHALLENGE_PREF_DESC">
+                    <option value="01">No preference</option>
+                    <option value="02">No challenge requested *</option>
+                    <option value="03">Challenge requested (Merchant preference)</option>
+                    <option value="04">Challenge requested (Mandate)</option>
+                    <option value="05">No challenge requested (transactional risk analysis is already performed) *</option>
+                    <option value="06">No challenge requested (Data share only)*</option>
+                    <option value="07">No challenge requested (strong consumer authentication is already performed) *</option>
+                    <option value="08">No challenge requested (utilise whitelist exemption if no challenge required) *</option>
+                    <option value="09">Challenge requested (whitelist prompt requested if challenge required)</option>
+                </field>
+
             </fieldset>
         </fields>
     </vmconfig>
